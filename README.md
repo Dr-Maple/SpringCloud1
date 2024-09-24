@@ -1,5 +1,7 @@
 # Spring-FrameWork-StopWatch
-01、背景有时我们在做开发的时候需要记录每个任务执行时间，或者记录一段代码执行时间，最简单的方法就是打印当前时间与执行完时间的差值，然后这样如果执行大量测试的话就很麻烦，并且不直观，如果想对执行的时间做进一步控制，则需要在程序中很多地方修改，目前spring-framework提供了一个StopWatch类可以做类似任务执行时间控制，也就是封装了一个对开始时间，结束时间记录工具02、示例我们来看几个示例03、统计输出总耗时import org.springframework.util.StopWatch;
+
+01背景有时我们在做开发的时候需要记录每个任务执行时间，或者记录一段代码执行时间，最简单的方法就是打印当前时间与执行完时间的差值，然后这样如果执行大量测试的话就很麻烦，并且不直观，如果想对执行的时间做进一步控制，则需要在程序中很多地方修改，目前spring-framework提供了一个StopWatch类可以做类似任务执行时间控制，也就是封装了一个对开始时间，结束时间记录工具02、示例我们来看几个示例03、统计输出总耗时
+import org.springframework.util.StopWatch;
  
 public class SpringStopWatchExample {
  
@@ -13,9 +15,10 @@ public class SpringStopWatchExample {
     }
 }
 输出1013
+
 04、输出最后一个任务的耗时public class SpringStopWatchExample2 {
- 
-    public static void main (String[] args) throws InterruptedException {
+
+  public static void main (String[] args) throws InterruptedException {
         StopWatch sw = new StopWatch();
         sw.start("A");//setting a task name
         //long task simulation
@@ -25,9 +28,11 @@ public class SpringStopWatchExample {
     }
 }
 输出1009
+
 05、以优雅的格式打出所有任务的耗时以及占比import org.springframework.util.StopWatch;
  
-public class SpringStopWatchExample3 {
+ 
+ public class SpringStopWatchExample3 {
  
     public static void main (String[] args) throws InterruptedException {
         StopWatch sw = new StopWatch();
@@ -44,6 +49,7 @@ public class SpringStopWatchExample3 {
     }
 }
 输出StopWatch '': running time (millis) = 1031
+
 -----------------------------------------
 ms     %     Task name
 -----------------------------------------
